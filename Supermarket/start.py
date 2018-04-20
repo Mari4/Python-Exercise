@@ -11,6 +11,15 @@ p4=Product('Butter', 2.25)
 
 products =[p0,p1,p2,p3,p4]
 
-register = Register(products)
-register.buy_products()
-sale = Sale(Register.buy_products())
+
+# d1=Discount()
+# d2=Discount()
+# d3=Discount()
+#
+# available_discounts = [d1,d2,d3]
+
+register = Register(products, discounts)
+register.sell_products()
+register.apply_discounts(available_discounts)
+register.print_receipt()
+# sale = Sale(Register.buy_products())

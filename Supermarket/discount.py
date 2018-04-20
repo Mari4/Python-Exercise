@@ -1,4 +1,4 @@
-
+from datetime import datetime
 
 class Discount():
 
@@ -6,19 +6,20 @@ class Discount():
          self.discount=discount
 
     def fixed_discount():
-            if Register.amount%2 == 0:
-                Sale.total_price = Product.price*Register.amount*0,7
-        return total_price
+        if Product.name == 'Washing Powder':
+            if int(Register.shopping_cart[1]/2) > 0:
+                discount = Product.price*Register.shopping_cart[1]*0,3
+        return discount
 
     def days_discount():
-        days = [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY]
-        enumarate(days)
 
-        if days == WEDNESDAY:
+        if date.today.weekday() == 2:
             if Product.name == 'Yoghurt':
-                Sale.price = 1.0
+                discount = Product.price-0.5
+            return discount
 
     def one_gratis():
             if Product.name == 'Butter':
-                if Register.amount == 4
-                    Sale.total_price = Product.price*Register.amount*3
+                if Register.shopping_cart[1] == 4
+                    discount = Product.price
+            return discount
